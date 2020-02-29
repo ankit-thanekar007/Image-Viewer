@@ -7,15 +7,91 @@
 //
 
 #import "CategoryScreen.h"
+#import "CategoryDataController.h"
+#import "CategoryCell.h"
 
 @interface CategoryScreen ()
-
+@property (nonatomic) NSMutableArray<ImagesCategory*>* master;
+@property IBOutlet UITableView *tableView;
+@property IBOutlet UIActivityIndicatorView *loader;
+@property IBOutlet UIView *fetchingFailedView;
+@property IBOutlet UILabel *fetchingFailedViewLabel;
 @end
 
 @implementation CategoryScreen
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
+-(CategoryDataController*)dataController {
+    return [CategoryDataController sharedInstance];
 }
 
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    [self setupRefreshControl];
+    [self fetchData];
+}
+
+-(void)setupRefreshControl {
+    UIRefreshControl *refreshControl = [[UIRefreshControl alloc]init];
+    _tableView.refreshControl = refreshControl;
+    [_tableView.refreshControl addTarget:self action:@selector(fetchData) forControlEvents:UIControlEventValueChanged];
+    [[_tableView refreshControl] endRefreshing];
+}
+
+-(void)fetchData {
+    [self startRelatedLoaders];
+    [_tableView setHidden:YES];
+    [_tableView setBackgroundView:_fetchingFailedView];
+    [[self dataController] setDelegate:self];
+    [[self dataController] fetchCategoryMasterData];
+}
+
+-(void)startRelatedLoaders {
+    if(![_tableView.refreshControl isRefreshing]) {
+        [_loader startAnimating];
+    }
+}
+
+-(void)stopRelatedLoaders {
+    [[_tableView refreshControl] endRefreshing];
+    [_loader stopAnimating];
+}
+
+#pragma mark Category Delegate Methods
+
+-(void)addedDataToCategories:(NSMutableArray<ImagesCategory *> *)values {
+    _master = values;
+    if(![_master count]){
+        _fetchingFailedViewLabel.text = @"No Results Found! Please Pull Down to Refresh!";
+    }
+    [self stopRelatedLoaders];
+    [_tableView setHidden:NO];
+    [_tableView reloadData];
+}
+
+- (void)failedToFetchData:(nonnull NSError *)error {
+    _fetchingFailedViewLabel.text = @"Error in fetching, Seems servers are down,Please try after some time!";
+    [_tableView setHidden:NO];
+    [self stopRelatedLoaders];
+    NSLog(@"Values %@", error);
+}
+
+#pragma mark TableView Data Source
+
+- (nonnull UITableViewCell *)tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
+    CategoryCell *cell = (CategoryCell*)[tableView
+                                         dequeueReusableCellWithIdentifier:@"CategoryCell"
+                                         forIndexPath:indexPath];
+    [cell setCellData:_master[indexPath.row]];
+    return cell;
+}
+
+- (NSInteger)tableView:(nonnull UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    [tableView.backgroundView setHidden:[_master count]];
+    return [_master count];
+}
+
+#pragma mark TableView Delegate
+
+
 @end
+

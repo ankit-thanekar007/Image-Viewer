@@ -12,6 +12,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface NetworkWrapper : NSObject
 
+-(NSURLSessionTask*)GET:(NSString*)urlString completion:(void(^)(BOOL result,
+                                                                 NSData *data,
+                                                                 NSError *error,
+                                                                 NSURLResponse *response))callback;
+
 @end
 
 NS_ASSUME_NONNULL_END

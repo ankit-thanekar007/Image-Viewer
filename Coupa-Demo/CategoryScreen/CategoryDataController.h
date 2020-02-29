@@ -7,10 +7,23 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "ImageDetails.h"
+#import "ImagesCategory.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
+@protocol CategoryDataParsed <NSObject>
+-(void)addedDataToCategories:(NSMutableArray<ImagesCategory*>*)values;
+-(void)failedToFetchData:(NSError*)error;
+
+@end
+
 @interface CategoryDataController : NSObject
+
+@property id delegate;
+
++ (instancetype)sharedInstance;
+-(void)fetchCategoryMasterData;
 
 @end
 
