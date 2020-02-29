@@ -1,0 +1,590 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BCC54DB4240A164000D3C38E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BCC54DB3240A164000D3C38E /* AppDelegate.m */; };
+		BCC54DB7240A164000D3C38E /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BCC54DB6240A164000D3C38E /* SceneDelegate.m */; };
+		BCC54DBA240A164000D3C38E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCC54DB9240A164000D3C38E /* ViewController.m */; };
+		BCC54DBD240A164000D3C38E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCC54DBB240A164000D3C38E /* Main.storyboard */; };
+		BCC54DBF240A164500D3C38E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BCC54DBE240A164500D3C38E /* Assets.xcassets */; };
+		BCC54DC2240A164500D3C38E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCC54DC0240A164500D3C38E /* LaunchScreen.storyboard */; };
+		BCC54DC5240A164500D3C38E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BCC54DC4240A164500D3C38E /* main.m */; };
+		BCC54DCF240A164500D3C38E /* Coupa_DemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BCC54DCE240A164500D3C38E /* Coupa_DemoTests.m */; };
+		BCC54DDA240A164500D3C38E /* Coupa_DemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = BCC54DD9240A164500D3C38E /* Coupa_DemoUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BCC54DCB240A164500D3C38E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BCC54DA7240A163F00D3C38E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BCC54DAE240A163F00D3C38E;
+			remoteInfo = "Coupa-Demo";
+		};
+		BCC54DD6240A164500D3C38E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BCC54DA7240A163F00D3C38E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BCC54DAE240A163F00D3C38E;
+			remoteInfo = "Coupa-Demo";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		BCC54DAF240A164000D3C38E /* Coupa-Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Coupa-Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BCC54DB2240A164000D3C38E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		BCC54DB3240A164000D3C38E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		BCC54DB5240A164000D3C38E /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
+		BCC54DB6240A164000D3C38E /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
+		BCC54DB8240A164000D3C38E /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		BCC54DB9240A164000D3C38E /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		BCC54DBC240A164000D3C38E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BCC54DBE240A164500D3C38E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BCC54DC1240A164500D3C38E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BCC54DC3240A164500D3C38E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BCC54DC4240A164500D3C38E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		BCC54DCA240A164500D3C38E /* Coupa-DemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Coupa-DemoTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BCC54DCE240A164500D3C38E /* Coupa_DemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Coupa_DemoTests.m; sourceTree = "<group>"; };
+		BCC54DD0240A164500D3C38E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BCC54DD5240A164500D3C38E /* Coupa-DemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Coupa-DemoUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BCC54DD9240A164500D3C38E /* Coupa_DemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Coupa_DemoUITests.m; sourceTree = "<group>"; };
+		BCC54DDB240A164500D3C38E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BCC54DAC240A163F00D3C38E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BCC54DC7240A164500D3C38E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BCC54DD2240A164500D3C38E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BCC54DA6240A163F00D3C38E = {
+			isa = PBXGroup;
+			children = (
+				BCC54DB1240A164000D3C38E /* Coupa-Demo */,
+				BCC54DCD240A164500D3C38E /* Coupa-DemoTests */,
+				BCC54DD8240A164500D3C38E /* Coupa-DemoUITests */,
+				BCC54DB0240A164000D3C38E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BCC54DB0240A164000D3C38E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BCC54DAF240A164000D3C38E /* Coupa-Demo.app */,
+				BCC54DCA240A164500D3C38E /* Coupa-DemoTests.xctest */,
+				BCC54DD5240A164500D3C38E /* Coupa-DemoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BCC54DB1240A164000D3C38E /* Coupa-Demo */ = {
+			isa = PBXGroup;
+			children = (
+				BCC54DB2240A164000D3C38E /* AppDelegate.h */,
+				BCC54DB3240A164000D3C38E /* AppDelegate.m */,
+				BCC54DB5240A164000D3C38E /* SceneDelegate.h */,
+				BCC54DB6240A164000D3C38E /* SceneDelegate.m */,
+				BCC54DB8240A164000D3C38E /* ViewController.h */,
+				BCC54DB9240A164000D3C38E /* ViewController.m */,
+				BCC54DBB240A164000D3C38E /* Main.storyboard */,
+				BCC54DBE240A164500D3C38E /* Assets.xcassets */,
+				BCC54DC0240A164500D3C38E /* LaunchScreen.storyboard */,
+				BCC54DC3240A164500D3C38E /* Info.plist */,
+				BCC54DC4240A164500D3C38E /* main.m */,
+			);
+			path = "Coupa-Demo";
+			sourceTree = "<group>";
+		};
+		BCC54DCD240A164500D3C38E /* Coupa-DemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				BCC54DCE240A164500D3C38E /* Coupa_DemoTests.m */,
+				BCC54DD0240A164500D3C38E /* Info.plist */,
+			);
+			path = "Coupa-DemoTests";
+			sourceTree = "<group>";
+		};
+		BCC54DD8240A164500D3C38E /* Coupa-DemoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				BCC54DD9240A164500D3C38E /* Coupa_DemoUITests.m */,
+				BCC54DDB240A164500D3C38E /* Info.plist */,
+			);
+			path = "Coupa-DemoUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BCC54DAE240A163F00D3C38E /* Coupa-Demo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BCC54DDE240A164500D3C38E /* Build configuration list for PBXNativeTarget "Coupa-Demo" */;
+			buildPhases = (
+				BCC54DAB240A163F00D3C38E /* Sources */,
+				BCC54DAC240A163F00D3C38E /* Frameworks */,
+				BCC54DAD240A163F00D3C38E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Coupa-Demo";
+			productName = "Coupa-Demo";
+			productReference = BCC54DAF240A164000D3C38E /* Coupa-Demo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BCC54DC9240A164500D3C38E /* Coupa-DemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BCC54DE1240A164500D3C38E /* Build configuration list for PBXNativeTarget "Coupa-DemoTests" */;
+			buildPhases = (
+				BCC54DC6240A164500D3C38E /* Sources */,
+				BCC54DC7240A164500D3C38E /* Frameworks */,
+				BCC54DC8240A164500D3C38E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BCC54DCC240A164500D3C38E /* PBXTargetDependency */,
+			);
+			name = "Coupa-DemoTests";
+			productName = "Coupa-DemoTests";
+			productReference = BCC54DCA240A164500D3C38E /* Coupa-DemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		BCC54DD4240A164500D3C38E /* Coupa-DemoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BCC54DE4240A164500D3C38E /* Build configuration list for PBXNativeTarget "Coupa-DemoUITests" */;
+			buildPhases = (
+				BCC54DD1240A164500D3C38E /* Sources */,
+				BCC54DD2240A164500D3C38E /* Frameworks */,
+				BCC54DD3240A164500D3C38E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BCC54DD7240A164500D3C38E /* PBXTargetDependency */,
+			);
+			name = "Coupa-DemoUITests";
+			productName = "Coupa-DemoUITests";
+			productReference = BCC54DD5240A164500D3C38E /* Coupa-DemoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BCC54DA7240A163F00D3C38E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = "Ankit Thanekar";
+				TargetAttributes = {
+					BCC54DAE240A163F00D3C38E = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+					BCC54DC9240A164500D3C38E = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = BCC54DAE240A163F00D3C38E;
+					};
+					BCC54DD4240A164500D3C38E = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = BCC54DAE240A163F00D3C38E;
+					};
+				};
+			};
+			buildConfigurationList = BCC54DAA240A163F00D3C38E /* Build configuration list for PBXProject "Coupa-Demo" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BCC54DA6240A163F00D3C38E;
+			productRefGroup = BCC54DB0240A164000D3C38E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BCC54DAE240A163F00D3C38E /* Coupa-Demo */,
+				BCC54DC9240A164500D3C38E /* Coupa-DemoTests */,
+				BCC54DD4240A164500D3C38E /* Coupa-DemoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BCC54DAD240A163F00D3C38E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BCC54DC2240A164500D3C38E /* LaunchScreen.storyboard in Resources */,
+				BCC54DBF240A164500D3C38E /* Assets.xcassets in Resources */,
+				BCC54DBD240A164000D3C38E /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BCC54DC8240A164500D3C38E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BCC54DD3240A164500D3C38E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BCC54DAB240A163F00D3C38E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BCC54DBA240A164000D3C38E /* ViewController.m in Sources */,
+				BCC54DB4240A164000D3C38E /* AppDelegate.m in Sources */,
+				BCC54DC5240A164500D3C38E /* main.m in Sources */,
+				BCC54DB7240A164000D3C38E /* SceneDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BCC54DC6240A164500D3C38E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BCC54DCF240A164500D3C38E /* Coupa_DemoTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BCC54DD1240A164500D3C38E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BCC54DDA240A164500D3C38E /* Coupa_DemoUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BCC54DCC240A164500D3C38E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BCC54DAE240A163F00D3C38E /* Coupa-Demo */;
+			targetProxy = BCC54DCB240A164500D3C38E /* PBXContainerItemProxy */;
+		};
+		BCC54DD7240A164500D3C38E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BCC54DAE240A163F00D3C38E /* Coupa-Demo */;
+			targetProxy = BCC54DD6240A164500D3C38E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		BCC54DBB240A164000D3C38E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BCC54DBC240A164000D3C38E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		BCC54DC0240A164500D3C38E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BCC54DC1240A164500D3C38E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BCC54DDC240A164500D3C38E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		BCC54DDD240A164500D3C38E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BCC54DDF240A164500D3C38E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7MS96A83MZ;
+				INFOPLIST_FILE = "Coupa-Demo/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ankit-t.Coupa-Demo";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BCC54DE0240A164500D3C38E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7MS96A83MZ;
+				INFOPLIST_FILE = "Coupa-Demo/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ankit-t.Coupa-Demo";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		BCC54DE2240A164500D3C38E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7MS96A83MZ;
+				INFOPLIST_FILE = "Coupa-DemoTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ankit-t.Coupa-DemoTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Coupa-Demo.app/Coupa-Demo";
+			};
+			name = Debug;
+		};
+		BCC54DE3240A164500D3C38E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7MS96A83MZ;
+				INFOPLIST_FILE = "Coupa-DemoTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ankit-t.Coupa-DemoTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Coupa-Demo.app/Coupa-Demo";
+			};
+			name = Release;
+		};
+		BCC54DE5240A164500D3C38E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7MS96A83MZ;
+				INFOPLIST_FILE = "Coupa-DemoUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ankit-t.Coupa-DemoUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Coupa-Demo";
+			};
+			name = Debug;
+		};
+		BCC54DE6240A164500D3C38E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7MS96A83MZ;
+				INFOPLIST_FILE = "Coupa-DemoUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ankit-t.Coupa-DemoUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Coupa-Demo";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BCC54DAA240A163F00D3C38E /* Build configuration list for PBXProject "Coupa-Demo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BCC54DDC240A164500D3C38E /* Debug */,
+				BCC54DDD240A164500D3C38E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BCC54DDE240A164500D3C38E /* Build configuration list for PBXNativeTarget "Coupa-Demo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BCC54DDF240A164500D3C38E /* Debug */,
+				BCC54DE0240A164500D3C38E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BCC54DE1240A164500D3C38E /* Build configuration list for PBXNativeTarget "Coupa-DemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BCC54DE2240A164500D3C38E /* Debug */,
+				BCC54DE3240A164500D3C38E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BCC54DE4240A164500D3C38E /* Build configuration list for PBXNativeTarget "Coupa-DemoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BCC54DE5240A164500D3C38E /* Debug */,
+				BCC54DE6240A164500D3C38E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BCC54DA7240A163F00D3C38E /* Project object */;
+}
