@@ -50,8 +50,12 @@
 
 #pragma mark Set Information
 
+-(void)setImage:(UIImage *)image {
+    self.metaDataImage.image = image;
+}
+
 -(void)setImage:(UIImage*)image andData : (NSString*)data {
-    _metaDataImage.image = image;
+    [self setImage:image];
     _metaInfoLabel.text = data;
 }
 

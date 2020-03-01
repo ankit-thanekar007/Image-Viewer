@@ -193,9 +193,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="lx0-RP-JXW">
-                                <rect key="frame" x="8" y="148" width="398" height="706"/>
+                                <rect key="frame" x="0.0" y="140" width="414" height="722"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="RJ8-h5-p9f">
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="10" id="RJ8-h5-p9f">
                                     <size key="itemSize" width="150" height="175"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -210,10 +210,10 @@
                         </subviews>
                         <color key="backgroundColor" white="0.90000000000000002" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="dsa-aD-nQI" firstAttribute="bottom" secondItem="lx0-RP-JXW" secondAttribute="bottom" constant="8" id="9mB-ip-OOJ"/>
-                            <constraint firstItem="dsa-aD-nQI" firstAttribute="trailing" secondItem="lx0-RP-JXW" secondAttribute="trailing" constant="8" id="Juu-mn-yGs"/>
-                            <constraint firstItem="lx0-RP-JXW" firstAttribute="leading" secondItem="dsa-aD-nQI" secondAttribute="leading" constant="8" id="hrj-KM-5hq"/>
-                            <constraint firstItem="lx0-RP-JXW" firstAttribute="top" secondItem="dsa-aD-nQI" secondAttribute="top" constant="8" id="roS-5y-Q75"/>
+                            <constraint firstItem="dsa-aD-nQI" firstAttribute="bottom" secondItem="lx0-RP-JXW" secondAttribute="bottom" id="9mB-ip-OOJ"/>
+                            <constraint firstItem="dsa-aD-nQI" firstAttribute="trailing" secondItem="lx0-RP-JXW" secondAttribute="trailing" id="Juu-mn-yGs"/>
+                            <constraint firstItem="lx0-RP-JXW" firstAttribute="leading" secondItem="dsa-aD-nQI" secondAttribute="leading" id="hrj-KM-5hq"/>
+                            <constraint firstItem="lx0-RP-JXW" firstAttribute="top" secondItem="dsa-aD-nQI" secondAttribute="top" id="roS-5y-Q75"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="dsa-aD-nQI"/>
                     </view>

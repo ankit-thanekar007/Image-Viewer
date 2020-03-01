@@ -10,62 +10,68 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="DetailsCell" id="gTV-IL-0wX" customClass="DetailsCell">
-            <rect key="frame" x="0.0" y="0.0" width="237" height="324"/>
+            <rect key="frame" x="0.0" y="0.0" width="280" height="492"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="237" height="324"/>
+                <rect key="frame" x="0.0" y="0.0" width="280" height="492"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4zz-A5-mPg">
-                        <rect key="frame" x="8" y="8" width="221" height="308"/>
+                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4zz-A5-mPg">
+                        <rect key="frame" x="8" y="8" width="264" height="476"/>
                         <subviews>
                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kdl-6y-gWz" customClass="LoadingImageView">
-                                <rect key="frame" x="16" y="16" width="189" height="138.5"/>
+                                <rect key="frame" x="16" y="16" width="232" height="309.5"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="JTT-DM-nY0">
-                                <rect key="frame" x="0.0" y="214.5" width="221" height="44"/>
-                                <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hf5-o6-Dmv" customClass="MetaDataView">
-                                        <rect key="frame" x="0.0" y="0.0" width="110.5" height="44"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                    </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y1b-Ox-Whq" customClass="MetaDataView">
-                                        <rect key="frame" x="110.5" y="0.0" width="110.5" height="44"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                    </view>
-                                </subviews>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="KQ8-3t-Sat">
-                                <rect key="frame" x="0.0" y="162.5" width="221" height="44"/>
-                                <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hiW-FB-qLY" customClass="MetaDataView">
-                                        <rect key="frame" x="0.0" y="0.0" width="110.5" height="44"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                    </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7e7-7N-Ud2" customClass="MetaDataView">
-                                        <rect key="frame" x="110.5" y="0.0" width="110.5" height="44"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                    </view>
-                                </subviews>
-                            </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hiW-FB-qLY" customClass="MetaDataView">
+                                <rect key="frame" x="16" y="333.5" width="112" height="50"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="vFg-Xf-THi"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AmQ-nN-L3k" customClass="MetaDataView">
+                                <rect key="frame" x="136" y="391.5" width="112" height="50"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="abO-i6-Cf8" customClass="MetaDataView">
+                                <rect key="frame" x="136" y="333.5" width="112" height="50"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OFA-bK-WEC" customClass="MetaDataView">
+                                <rect key="frame" x="16" y="391.5" width="112" height="50"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="KQ8-3t-Sat" firstAttribute="top" secondItem="kdl-6y-gWz" secondAttribute="bottom" constant="8" id="2so-qp-yas"/>
-                            <constraint firstItem="KQ8-3t-Sat" firstAttribute="height" secondItem="4zz-A5-mPg" secondAttribute="height" multiplier="0.142857" id="7kM-D8-VSY"/>
-                            <constraint firstItem="kdl-6y-gWz" firstAttribute="height" secondItem="4zz-A5-mPg" secondAttribute="height" multiplier="0.45" id="EP4-7f-lPL"/>
+                            <constraint firstItem="abO-i6-Cf8" firstAttribute="leading" secondItem="hiW-FB-qLY" secondAttribute="trailing" constant="8" symbolic="YES" id="19o-pl-qxc"/>
+                            <constraint firstItem="AmQ-nN-L3k" firstAttribute="leading" secondItem="OFA-bK-WEC" secondAttribute="trailing" constant="8" symbolic="YES" id="2KL-nN-aXT"/>
+                            <constraint firstItem="OFA-bK-WEC" firstAttribute="height" secondItem="hiW-FB-qLY" secondAttribute="height" id="BSP-Pk-O9B"/>
+                            <constraint firstItem="AmQ-nN-L3k" firstAttribute="top" secondItem="abO-i6-Cf8" secondAttribute="bottom" constant="8" id="DQr-bJ-bfN"/>
+                            <constraint firstItem="abO-i6-Cf8" firstAttribute="top" secondItem="kdl-6y-gWz" secondAttribute="bottom" constant="8" id="E5W-hl-5sl"/>
+                            <constraint firstItem="kdl-6y-gWz" firstAttribute="height" secondItem="4zz-A5-mPg" secondAttribute="height" multiplier="0.65" id="EP4-7f-lPL"/>
                             <constraint firstItem="kdl-6y-gWz" firstAttribute="leading" secondItem="4zz-A5-mPg" secondAttribute="leading" constant="16" id="Egg-G8-yj5"/>
-                            <constraint firstItem="JTT-DM-nY0" firstAttribute="leading" secondItem="4zz-A5-mPg" secondAttribute="leading" id="JOr-3X-gdE"/>
+                            <constraint firstItem="AmQ-nN-L3k" firstAttribute="trailing" secondItem="abO-i6-Cf8" secondAttribute="trailing" id="HBN-th-pzQ"/>
+                            <constraint firstItem="AmQ-nN-L3k" firstAttribute="width" secondItem="OFA-bK-WEC" secondAttribute="width" id="IMd-3m-lGJ"/>
+                            <constraint firstItem="OFA-bK-WEC" firstAttribute="leading" secondItem="hiW-FB-qLY" secondAttribute="leading" id="LQ2-0F-CjJ"/>
+                            <constraint firstItem="abO-i6-Cf8" firstAttribute="trailing" secondItem="kdl-6y-gWz" secondAttribute="trailing" id="LRF-fO-XAJ"/>
                             <constraint firstAttribute="trailing" secondItem="kdl-6y-gWz" secondAttribute="trailing" constant="16" id="O8y-iV-FkH"/>
-                            <constraint firstAttribute="trailing" secondItem="KQ8-3t-Sat" secondAttribute="trailing" id="VdF-NN-mBt"/>
-                            <constraint firstItem="JTT-DM-nY0" firstAttribute="height" secondItem="KQ8-3t-Sat" secondAttribute="height" id="Yia-YY-XAK"/>
+                            <constraint firstItem="abO-i6-Cf8" firstAttribute="height" secondItem="hiW-FB-qLY" secondAttribute="height" id="YT3-xV-mv2"/>
+                            <constraint firstItem="hiW-FB-qLY" firstAttribute="leading" secondItem="kdl-6y-gWz" secondAttribute="leading" id="aoK-wh-YIT"/>
                             <constraint firstItem="kdl-6y-gWz" firstAttribute="top" secondItem="4zz-A5-mPg" secondAttribute="top" constant="16" id="apR-VE-2cm"/>
-                            <constraint firstAttribute="trailing" secondItem="JTT-DM-nY0" secondAttribute="trailing" id="dAB-Xd-C50"/>
-                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="JTT-DM-nY0" secondAttribute="bottom" constant="20" symbolic="YES" id="rQE-hu-JDW"/>
-                            <constraint firstItem="JTT-DM-nY0" firstAttribute="top" secondItem="KQ8-3t-Sat" secondAttribute="bottom" constant="8" symbolic="YES" id="sbB-OS-Jht"/>
-                            <constraint firstItem="KQ8-3t-Sat" firstAttribute="leading" secondItem="4zz-A5-mPg" secondAttribute="leading" id="wIA-9Y-2lo"/>
+                            <constraint firstItem="OFA-bK-WEC" firstAttribute="top" secondItem="hiW-FB-qLY" secondAttribute="bottom" constant="8" id="bQO-bH-Vgv"/>
+                            <constraint firstItem="AmQ-nN-L3k" firstAttribute="height" secondItem="hiW-FB-qLY" secondAttribute="height" id="ka2-29-hfO"/>
+                            <constraint firstItem="hiW-FB-qLY" firstAttribute="top" secondItem="kdl-6y-gWz" secondAttribute="bottom" constant="8" id="lFI-Dv-ieS"/>
+                            <constraint firstItem="abO-i6-Cf8" firstAttribute="width" secondItem="hiW-FB-qLY" secondAttribute="width" id="mbI-cQ-5Vr"/>
+                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="AmQ-nN-L3k" secondAttribute="bottom" constant="16" id="nix-ls-zSk"/>
+                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="OFA-bK-WEC" secondAttribute="bottom" constant="16" id="rT2-mJ-ro2"/>
                         </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="8"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </view>
                 </subviews>
             </view>
@@ -76,15 +82,15 @@
                 <constraint firstAttribute="bottom" secondItem="4zz-A5-mPg" secondAttribute="bottom" constant="8" id="vTL-6X-hKe"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="SEy-5g-ep8"/>
-            <size key="customSize" width="237" height="324"/>
+            <size key="customSize" width="280" height="492"/>
             <connections>
                 <outlet property="detailedImage" destination="kdl-6y-gWz" id="RIy-sg-6eI"/>
                 <outlet property="downloadsView" destination="hiW-FB-qLY" id="edT-SM-Vbt"/>
-                <outlet property="favoritesView" destination="7e7-7N-Ud2" id="qjx-Ou-lah"/>
-                <outlet property="likesView" destination="Hf5-o6-Dmv" id="nz1-dI-Nyg"/>
-                <outlet property="viewsView" destination="Y1b-Ox-Whq" id="wkQ-yI-SdO"/>
+                <outlet property="favoritesView" destination="abO-i6-Cf8" id="wWo-v7-Ysl"/>
+                <outlet property="likesView" destination="OFA-bK-WEC" id="Bsa-uD-0jz"/>
+                <outlet property="viewsView" destination="AmQ-nN-L3k" id="ecV-Tf-9Dc"/>
             </connections>
-            <point key="canvasLocation" x="-120" y="25"/>
+            <point key="canvasLocation" x="-89.855072463768124" y="7.3660714285714279"/>
         </collectionViewCell>
     </objects>
 </document>

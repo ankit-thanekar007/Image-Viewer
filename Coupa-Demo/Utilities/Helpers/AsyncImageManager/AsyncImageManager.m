@@ -40,6 +40,8 @@
 -(void)downloadImageWithURL : (NSString*) url
                onCompletion : (void(^)(BOOL result, UIImage *image))completion {
     
+    
+    
     UIImage *image = [_imageCache objectForKey:url];
     if(image != NULL){
         completion(YES, image);

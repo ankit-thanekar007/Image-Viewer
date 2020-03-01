@@ -17,6 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 -(void)setImage:(UIImage*)image andData : (NSString*)data;
+-(void)setImage:(nullable UIImage *)image;
 
 @end
 

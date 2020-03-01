@@ -17,7 +17,7 @@ IB_DESIGNABLE
 @property (nonatomic) IBOutlet UIActivityIndicatorView *loader;
 @property (nonatomic) IBInspectable UIViewContentMode mode;
 
--(void)setImage:(UIImage*)image;
+-(void)setImage:(nullable UIImage*)image;
 -(void)startLoading ;
 -(void)stopLoading ;
 @end

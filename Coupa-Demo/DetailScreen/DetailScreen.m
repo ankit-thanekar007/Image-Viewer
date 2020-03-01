@@ -41,7 +41,8 @@
 #pragma mark UICollectionView Delegate
 
 -(CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
-    return CGSizeMake(self.collectionView.frame.size.width, self.collectionView.frame.size.height);
+    CGSize cellSize = CGSizeMake(self.collectionView.frame.size.width, self.collectionView.frame.size.height);
+    return cellSize;
 }
 
 @end

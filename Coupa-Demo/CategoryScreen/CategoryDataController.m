@@ -77,8 +77,13 @@ typedef enum : NSUInteger {
                                         NSError *error,
                                         NSURLResponse *response) {
         if(result) {
-            [self.categoryMaster addObject:[self parseImageData:data withCategory:NATURE]];
-            completion(YES);
+            ImagesCategory *nature = [self parseImageData:data withCategory:NATURE];
+            if(nature) {
+                [self.categoryMaster addObject:nature];
+                completion(YES);
+            }else {
+                completion(NO);
+            }
         }else {
             [self->_delegate failedToFetchData:error];
             completion(NO);
@@ -95,8 +100,13 @@ typedef enum : NSUInteger {
                                         NSError *error,
                                         NSURLResponse *response) {
         if(result) {
-            [self.categoryMaster addObject:[self parseImageData:data withCategory:SCIENCE]];
-            completion(YES);
+            ImagesCategory *science = [self parseImageData:data withCategory:SCIENCE];
+            if(science) {
+                [self.categoryMaster addObject:science];
+                completion(YES);
+            }else {
+                completion(NO);
+            }
         }else {
             [self->_delegate failedToFetchData:error];
             completion(NO);
@@ -113,8 +123,13 @@ typedef enum : NSUInteger {
                                         NSError *error,
                                         NSURLResponse *response) {
         if(result) {
-            [self.categoryMaster addObject:[self parseImageData:data withCategory:EDUCATION]];
-            completion(YES);
+            ImagesCategory *education = [self parseImageData:data withCategory:EDUCATION];
+            if(education) {
+                [self.categoryMaster addObject:education];
+                completion(YES);
+            }else {
+                completion(NO);
+            }
         }else {
             [self->_delegate failedToFetchData:error];
             completion(NO);
@@ -132,8 +147,13 @@ typedef enum : NSUInteger {
                                         NSError *error,
                                         NSURLResponse *response) {
         if(result) {
-            [self.categoryMaster addObject:[self parseImageData:data withCategory:FOOD]];
-            completion(YES);
+            ImagesCategory *food = [self parseImageData:data withCategory:FOOD];
+            if(food) {
+                [self.categoryMaster addObject:food];
+                completion(YES);
+            }else {
+                completion(NO);
+            }
         }else {
             [self->_delegate failedToFetchData:error];
             completion(NO);
@@ -170,14 +190,14 @@ typedef enum : NSUInteger {
                [details setValuesForKeysWithDictionary:currentObj];
                [allImages addObject:details];
            }
-           
-           return [[ImagesCategory alloc]
-                   initWithTitle:[self imageCategoryFor:category]
-                   andImages:allImages];
+        if ([allImages count]) {
+            return [[ImagesCategory alloc]
+            initWithTitle:[self imageCategoryFor:category]
+            andImages:allImages];
+        }
     } @catch (NSException *exception) {
         NSLog(@"Error %@", exception.description);
     }
-    
     return nil;
 }
 
