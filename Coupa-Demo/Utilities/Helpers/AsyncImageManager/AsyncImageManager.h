@@ -17,8 +17,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 -(void)downloadImageWithURL : (NSString*) url
                onCompletion : (void(^)(BOOL result, UIImage *image))completion;
--(void)cancelTaskFor:(NSString*) uuid;
 
+-(void)cancelTaskFor:(NSString*) uuid;
+-(void) cancelAll ;
 @end
 
 NS_ASSUME_NONNULL_END

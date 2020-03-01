@@ -1,19 +1,20 @@
 //
-//  LoadingImageView.m
+//  MetaDataView.m
 //  Coupa-Demo
 //
 //  Created by Ankit Thanekar on 29/02/20.
 //  Copyright © 2020 Ankit Thanekar. All rights reserved.
 //
 
-#import "LoadingImageView.h"
+#import "MetaDataView.h"
 
-@interface LoadingImageView ()
+@interface MetaDataView ()
+
 @property (nonatomic) UIView* containerView;
+
 @end
 
-@implementation LoadingImageView
-
+@implementation MetaDataView
 
 -(instancetype)initWithCoder:(NSCoder *)coder {
     self = [super initWithCoder:coder];
@@ -29,13 +30,10 @@
 
 -(void)drawRect:(CGRect)rect {
     [super drawRect:rect];
-    if(_mode) {
-        [_imageV setContentMode:_mode];
-    }
 }
 
 -(void)prepareContainer{
-    UINib *nib = [UINib nibWithNibName:@"LoadingImageView" bundle:[NSBundle mainBundle]];
+    UINib *nib = [UINib nibWithNibName:@"MetaDataView" bundle:[NSBundle mainBundle]];
     _containerView = [nib instantiateWithOwner:self options:nil][0];
     
     [self addSubview:_containerView];
@@ -49,23 +47,12 @@
     ]];
 }
 
--(void)setImage:(UIImage*)image {
-    dispatch_async(dispatch_get_main_queue(), ^(void){
-           [self->_imageV setImage:image];
-    });
-}
 
--(void)startLoading {
-    dispatch_async(dispatch_get_main_queue(), ^(void){
-           [self->_loader startAnimating];
-    });
-    
-}
+#pragma mark Set Information
 
--(void)stopLoading {
-    dispatch_async(dispatch_get_main_queue(), ^(void){
-           [self->_loader stopAnimating];
-    });
+-(void)setImage:(UIImage*)image andData : (NSString*)data {
+    _metaDataImage.image = image;
+    _metaInfoLabel.text = data;
 }
 
 @end

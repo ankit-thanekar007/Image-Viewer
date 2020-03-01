@@ -10,10 +10,12 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+IB_DESIGNABLE
 @interface LoadingImageView : UIView
 
 @property (nonatomic) IBOutlet UIImageView *imageV;
 @property (nonatomic) IBOutlet UIActivityIndicatorView *loader;
+@property (nonatomic) IBInspectable UIViewContentMode mode;
 
 -(void)setImage:(UIImage*)image;
 -(void)startLoading ;

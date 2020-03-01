@@ -9,6 +9,7 @@
 #import "CategoryScreen.h"
 #import "CategoryDataController.h"
 #import "CategoryCell.h"
+#import "DetailScreen.h"
 
 @interface CategoryScreen ()
 @property (nonatomic) NSMutableArray<ImagesCategory*>* master;
@@ -19,6 +20,9 @@
 @end
 
 @implementation CategoryScreen
+{
+    ImagesCategory *selectedCategory;
+}
 
 -(CategoryDataController*)dataController {
     return [CategoryDataController sharedInstance];
@@ -28,6 +32,13 @@
     [super viewDidLoad];
     [self setupRefreshControl];
     [self fetchData];
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if([segue.identifier isEqualToString: @"ViewDetailsSegue"]){
+        DetailScreen *ds = segue.destinationViewController;
+        ds.selectedCategory = selectedCategory;
+    }
 }
 
 -(void)setupRefreshControl {
@@ -92,6 +103,10 @@
 
 #pragma mark TableView Delegate
 
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    selectedCategory = [_master objectAtIndex:indexPath.row];
+    [self performSegueWithIdentifier:@"ViewDetailsSegue" sender:self];
+}
 
 @end
 

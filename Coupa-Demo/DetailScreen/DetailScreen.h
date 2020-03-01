@@ -7,10 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ImagesCategory.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface DetailScreen : UIViewController
+@interface DetailScreen : UIViewController <UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
+
+@property (nonatomic) ImagesCategory *selectedCategory;
 
 @end
 

@@ -15,12 +15,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="ugW-x1-gDl">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ugW-x1-gDl">
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CategoryCell" rowHeight="461" id="Ow6-BD-7g8" customClass="CategoryCell">
-                                        <rect key="frame" x="0.0" y="55.5" width="414" height="461"/>
+                                        <rect key="frame" x="0.0" y="28" width="414" height="461"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ow6-BD-7g8" id="LYj-Pf-ELo">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="461"/>
@@ -46,20 +46,23 @@
                                                             </constraints>
                                                         </stackView>
                                                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="H0u-xQ-9ZD">
-                                                            <rect key="frame" x="8" y="116" width="358" height="110"/>
+                                                            <rect key="frame" x="8" y="116" width="358" height="100"/>
                                                             <subviews>
                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7pr-xe-wWQ" customClass="LoadingImageView">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="175" height="110"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="175" height="100"/>
                                                                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                                 </view>
                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ylx-aR-yDC" customClass="LoadingImageView">
-                                                                    <rect key="frame" x="183" y="0.0" width="175" height="110"/>
+                                                                    <rect key="frame" x="183" y="0.0" width="175" height="100"/>
                                                                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                                 </view>
                                                             </subviews>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="100" id="PNe-KF-jic"/>
+                                                            </constraints>
                                                         </stackView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PC6-Ux-jax">
-                                                            <rect key="frame" x="16" y="242" width="342" height="181"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PC6-Ux-jax">
+                                                            <rect key="frame" x="16" y="224" width="342" height="199"/>
                                                             <fontDescription key="fontDescription" name="Georgia-Bold" family="Georgia" pointSize="24"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -70,13 +73,12 @@
                                                         <constraint firstAttribute="trailing" secondItem="PC6-Ux-jax" secondAttribute="trailing" constant="16" id="2bd-1g-rQv"/>
                                                         <constraint firstItem="PC6-Ux-jax" firstAttribute="leading" secondItem="OB3-Gy-H98" secondAttribute="leading" constant="16" id="63c-KN-5r9"/>
                                                         <constraint firstAttribute="trailing" secondItem="U1X-k8-iCM" secondAttribute="trailing" constant="8" id="KZU-U2-ef7"/>
-                                                        <constraint firstItem="PC6-Ux-jax" firstAttribute="top" secondItem="H0u-xQ-9ZD" secondAttribute="bottom" constant="16" id="PbO-jD-8LJ"/>
+                                                        <constraint firstItem="PC6-Ux-jax" firstAttribute="top" secondItem="H0u-xQ-9ZD" secondAttribute="bottom" constant="8" id="PbO-jD-8LJ"/>
                                                         <constraint firstAttribute="bottom" secondItem="PC6-Ux-jax" secondAttribute="bottom" constant="16" id="Vsq-QW-6cK"/>
                                                         <constraint firstItem="H0u-xQ-9ZD" firstAttribute="top" secondItem="U1X-k8-iCM" secondAttribute="bottom" constant="8" id="WF8-nx-RAa"/>
                                                         <constraint firstItem="U1X-k8-iCM" firstAttribute="leading" secondItem="OB3-Gy-H98" secondAttribute="leading" constant="8" id="aPU-dE-EX7"/>
                                                         <constraint firstAttribute="trailing" secondItem="H0u-xQ-9ZD" secondAttribute="trailing" constant="8" id="eJ0-hQ-doB"/>
                                                         <constraint firstItem="H0u-xQ-9ZD" firstAttribute="leading" secondItem="OB3-Gy-H98" secondAttribute="leading" constant="8" id="iGI-pD-6wX"/>
-                                                        <constraint firstItem="H0u-xQ-9ZD" firstAttribute="height" secondItem="U1X-k8-iCM" secondAttribute="height" multiplier="1.1" id="ybv-VH-EK9"/>
                                                         <constraint firstItem="U1X-k8-iCM" firstAttribute="top" secondItem="OB3-Gy-H98" secondAttribute="top" constant="8" id="z6X-fc-Ea2"/>
                                                     </constraints>
                                                     <userDefinedRuntimeAttributes>
@@ -131,6 +133,7 @@
                         <outlet property="fetchingFailedViewLabel" destination="gg9-fQ-xRJ" id="Fku-Eq-H9n"/>
                         <outlet property="loader" destination="vWg-Gq-mUg" id="KOu-ls-kOF"/>
                         <outlet property="tableView" destination="ugW-x1-gDl" id="F4e-m4-qZW"/>
+                        <segue destination="rZW-mz-q7t" kind="show" identifier="ViewDetailsSegue" id="SxB-2S-CzP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -181,20 +184,47 @@
             </objects>
             <point key="canvasLocation" x="640.57971014492762" y="91.741071428571431"/>
         </scene>
-        <!--View Controller-->
+        <!--Details-->
         <scene sceneID="3i4-5r-S4V">
             <objects>
-                <viewController id="rZW-mz-q7t" sceneMemberID="viewController">
+                <viewController id="rZW-mz-q7t" customClass="DetailScreen" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pAJ-0j-6Ay">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="lx0-RP-JXW">
+                                <rect key="frame" x="8" y="148" width="398" height="706"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="RJ8-h5-p9f">
+                                    <size key="itemSize" width="150" height="175"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                                <connections>
+                                    <outlet property="dataSource" destination="rZW-mz-q7t" id="dfQ-Mj-TuN"/>
+                                    <outlet property="delegate" destination="rZW-mz-q7t" id="6gL-GM-U0k"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.90000000000000002" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="dsa-aD-nQI" firstAttribute="bottom" secondItem="lx0-RP-JXW" secondAttribute="bottom" constant="8" id="9mB-ip-OOJ"/>
+                            <constraint firstItem="dsa-aD-nQI" firstAttribute="trailing" secondItem="lx0-RP-JXW" secondAttribute="trailing" constant="8" id="Juu-mn-yGs"/>
+                            <constraint firstItem="lx0-RP-JXW" firstAttribute="leading" secondItem="dsa-aD-nQI" secondAttribute="leading" constant="8" id="hrj-KM-5hq"/>
+                            <constraint firstItem="lx0-RP-JXW" firstAttribute="top" secondItem="dsa-aD-nQI" secondAttribute="top" constant="8" id="roS-5y-Q75"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="dsa-aD-nQI"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Details" id="hDr-FI-zWh"/>
+                    <connections>
+                        <outlet property="collectionView" destination="lx0-RP-JXW" id="XTW-MX-hCI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gzQ-XZ-rUj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1486" y="92"/>
+            <point key="canvasLocation" x="1779.7101449275365" y="91.741071428571431"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="FoE-jH-dlP">

@@ -58,7 +58,7 @@
             [self->_urlDict removeObjectForKey:response.URL.absoluteString];
             completion(YES, image);
         }else {
-            completion(NO, nil); 
+            completion(NO, nil);
         }
     }];
     [_urlDict setValue:task forKey:url];
@@ -69,6 +69,13 @@
     if(task) {
         [task cancel];
     }
+}
+
+-(void) cancelAll {
+    [_urlDict enumerateKeysAndObjectsUsingBlock:^(NSString * _Nonnull key, NSURLSessionTask * _Nonnull obj, BOOL * _Nonnull stop) {
+        [obj cancel];
+    }];
+    [_urlDict removeAllObjects];
 }
 
 @end

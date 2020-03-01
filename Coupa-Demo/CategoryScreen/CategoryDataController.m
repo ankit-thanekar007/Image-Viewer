@@ -39,6 +39,7 @@ typedef enum : NSUInteger {
 -(void)fetchCategoryMasterData {
     dispatch_group_t group = dispatch_group_create();
     _categoryMaster = [NSMutableArray array];
+    
     dispatch_group_enter(group);
     [self fetchNatureData:^(BOOL result) {
         dispatch_group_leave(group);
