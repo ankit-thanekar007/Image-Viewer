@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoadingImageView">
+            <connections>
+                <outlet property="imageV" destination="dJL-Rx-1ap" id="X8c-XE-dCJ"/>
+                <outlet property="loader" destination="6J1-3C-jRU" id="zpe-wc-q9S"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="4Sr-cG-JKL">
+            <rect key="frame" x="0.0" y="0.0" width="527" height="525"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z3Y-UN-Tza">
+                    <rect key="frame" x="0.0" y="0.0" width="527" height="525"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dJL-Rx-1ap">
+                            <rect key="frame" x="0.0" y="0.0" width="527" height="525"/>
+                        </imageView>
+                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="6J1-3C-jRU">
+                            <rect key="frame" x="253.5" y="252.5" width="20" height="20"/>
+                            <color key="color" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </activityIndicatorView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstItem="6J1-3C-jRU" firstAttribute="centerY" secondItem="Z3Y-UN-Tza" secondAttribute="centerY" id="1lX-lV-fHR"/>
+                        <constraint firstItem="6J1-3C-jRU" firstAttribute="centerX" secondItem="Z3Y-UN-Tza" secondAttribute="centerX" id="Gbi-82-hHz"/>
+                        <constraint firstAttribute="bottom" secondItem="dJL-Rx-1ap" secondAttribute="bottom" id="Y3O-kf-574"/>
+                        <constraint firstAttribute="trailing" secondItem="dJL-Rx-1ap" secondAttribute="trailing" id="fzX-Qo-fYZ"/>
+                        <constraint firstItem="dJL-Rx-1ap" firstAttribute="top" secondItem="Z3Y-UN-Tza" secondAttribute="top" id="kUQ-RL-2OD"/>
+                        <constraint firstItem="dJL-Rx-1ap" firstAttribute="leading" secondItem="Z3Y-UN-Tza" secondAttribute="leading" id="qFd-Ue-ob2"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="Z3Y-UN-Tza" firstAttribute="top" secondItem="4Sr-cG-JKL" secondAttribute="top" id="Mlg-f0-gjs"/>
+                <constraint firstItem="Z3Y-UN-Tza" firstAttribute="leading" secondItem="4Sr-cG-JKL" secondAttribute="leading" id="Xl2-hx-gyv"/>
+                <constraint firstAttribute="bottom" secondItem="Z3Y-UN-Tza" secondAttribute="bottom" id="rUg-Le-9j3"/>
+                <constraint firstAttribute="trailing" secondItem="Z3Y-UN-Tza" secondAttribute="trailing" id="veK-SQ-lWB"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="TVX-lq-83p"/>
+            <point key="canvasLocation" x="43" y="-391"/>
+        </view>
+    </objects>
+</document>

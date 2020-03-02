@@ -1,0 +1,19 @@
+//
+//  AppConstants.pch
+//  Coupa-Demo
+//
+//  Created by Ankit Thanekar on 29/02/20.
+//  Copyright © 2020 Ankit Thanekar. All rights reserved.
+//
+
+#ifndef AppConstants_pch
+#define AppConstants_pch
+
+
+#define API_KEY @"15428294-b96273fc1d19350a81ea06825"
+#define BASE_URL @"https://pixabay.com/api/?key=15428294-b96273fc1d19350a81ea06825&image_type=photo&lang=en&safesearch=true&page_size=20"
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif /* AppConstants_pch */
