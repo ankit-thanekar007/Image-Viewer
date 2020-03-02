@@ -60,6 +60,9 @@
 		BCC54E3E240B1F3600D3C38E /* MetaDataView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCC54E3A240B1F3600D3C38E /* MetaDataView.xib */; };
 		BCC54E3F240B1F3600D3C38E /* MetaDataView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCC54E3A240B1F3600D3C38E /* MetaDataView.xib */; };
 		BCC54E40240B1F3600D3C38E /* MetaDataView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCC54E3A240B1F3600D3C38E /* MetaDataView.xib */; };
+		BCC54E43240C8BE800D3C38E /* RequestMap.m in Sources */ = {isa = PBXBuildFile; fileRef = BCC54E42240C8BE800D3C38E /* RequestMap.m */; };
+		BCC54E44240C8BE800D3C38E /* RequestMap.m in Sources */ = {isa = PBXBuildFile; fileRef = BCC54E42240C8BE800D3C38E /* RequestMap.m */; };
+		BCC54E45240C8BE800D3C38E /* RequestMap.m in Sources */ = {isa = PBXBuildFile; fileRef = BCC54E42240C8BE800D3C38E /* RequestMap.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -124,6 +127,8 @@
 		BCC54E38240B1F3600D3C38E /* MetaDataView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MetaDataView.h; sourceTree = "<group>"; };
 		BCC54E39240B1F3600D3C38E /* MetaDataView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MetaDataView.m; sourceTree = "<group>"; };
 		BCC54E3A240B1F3600D3C38E /* MetaDataView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MetaDataView.xib; sourceTree = "<group>"; };
+		BCC54E41240C8BE800D3C38E /* RequestMap.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RequestMap.h; sourceTree = "<group>"; };
+		BCC54E42240C8BE800D3C38E /* RequestMap.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RequestMap.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -306,6 +311,8 @@
 			isa = PBXGroup;
 			children = (
 				BCC54E2D240B1BA600D3C38E /* AsyncImageManager */,
+				BCC54E41240C8BE800D3C38E /* RequestMap.h */,
+				BCC54E42240C8BE800D3C38E /* RequestMap.m */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -482,6 +489,7 @@
 				BCC54DC5240A164500D3C38E /* main.m in Sources */,
 				BCC54DF7240A1A9100D3C38E /* NetworkWrapper.m in Sources */,
 				BCC54E31240B1CE800D3C38E /* DetailsCell.m in Sources */,
+				BCC54E43240C8BE800D3C38E /* RequestMap.m in Sources */,
 				BCC54DB7240A164000D3C38E /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -494,6 +502,7 @@
 				BCC54E16240AD89600D3C38E /* ImagesCategory.m in Sources */,
 				BCC54E3C240B1F3600D3C38E /* MetaDataView.m in Sources */,
 				BCC54E32240B1CE800D3C38E /* DetailsCell.m in Sources */,
+				BCC54E44240C8BE800D3C38E /* RequestMap.m in Sources */,
 				BCC54DED240A196E00D3C38E /* CategoryScreen.m in Sources */,
 				BCC54E1E240AE76D00D3C38E /* LoadingImageView.m in Sources */,
 				BCC54DFE240A1AC000D3C38E /* DetailScreen.m in Sources */,
@@ -514,6 +523,7 @@
 				BCC54E17240AD89600D3C38E /* ImagesCategory.m in Sources */,
 				BCC54E3D240B1F3600D3C38E /* MetaDataView.m in Sources */,
 				BCC54E33240B1CE800D3C38E /* DetailsCell.m in Sources */,
+				BCC54E45240C8BE800D3C38E /* RequestMap.m in Sources */,
 				BCC54DEE240A196E00D3C38E /* CategoryScreen.m in Sources */,
 				BCC54E1F240AE76D00D3C38E /* LoadingImageView.m in Sources */,
 				BCC54DFF240A1AC000D3C38E /* DetailScreen.m in Sources */,

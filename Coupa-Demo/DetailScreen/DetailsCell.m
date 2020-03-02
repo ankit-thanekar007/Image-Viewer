@@ -27,7 +27,9 @@
     [self.likesView setImage:nil];
 }
 
--(void)setCellData : (ImageDetails*)details {
+-(void)setCellData : (ImageDetails*)details atIndex : (int) row {
+    
+    [self setIndexOfCell:row];
     
     [self setLikes: [@(details.likes) stringValue]];
     [self setFavorites: [@(details.favorites) stringValue]];

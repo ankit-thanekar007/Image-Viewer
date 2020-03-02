@@ -16,8 +16,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface DetailsCell : UICollectionViewCell
 
--(void)setCellData : (ImageDetails*)details;
+-(void)setCellData : (ImageDetails*)details atIndex : (int) row;
 
+@property int indexOfCell;
 @property(nonatomic) IBOutlet LoadingImageView *detailedImage;
 
 @property(nonatomic) IBOutlet MetaDataView *likesView;

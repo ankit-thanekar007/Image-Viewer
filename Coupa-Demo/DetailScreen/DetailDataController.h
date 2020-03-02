@@ -7,10 +7,26 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "ImagesCategory.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
+@protocol RefreshCell <NSObject>
+
+-(void)refreshCellAtIndex:(int)index;
+
+@end
+
+
 @interface DetailDataController : NSObject
+
+@property id delegate;
+
++ (instancetype)sharedInstance;
+
+-(NSArray<ImageDetails*>*)getToBeUsed;
+-(void)setMasterCategory : (ImagesCategory*)category;
+-(void)replaceImageAtIndex : (int) row ;
 
 @end
 
