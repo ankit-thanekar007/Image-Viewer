@@ -91,7 +91,10 @@
 }
 
 -(void)failedToFetch:(int)index {
-    
+    [[_imageDetailsArray objectAtIndex:index] setShouldRetry:YES];
+    [[self collectionView] reloadItemsAtIndexPaths:@[[NSIndexPath indexPathForItem:index
+                                                                         inSection:0]]];
+    [[_collectionView refreshControl] endRefreshing];
 }
 
 @end

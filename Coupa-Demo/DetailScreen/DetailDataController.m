@@ -49,6 +49,7 @@
 
 -(void)setMasterCategory : (ImagesCategory*)category {
     _selectedCategory = category;
+    pageNumber = 1;
     [self splitMaster];
 }
 
@@ -90,21 +91,21 @@
 -(void)fetchDataFromRequestForReplacement:(int) row {
     RequestMap *map = [[RequestMap alloc] init];
     pageNumber = pageNumber + 1;
-    NSString *pagedURL = [NSString stringWithFormat:@"&category=%@&per_page=5&page=%d",
+    NSString *pagedURL = [NSString stringWithFormat:@"&category=%@&per_page=20&page=%d",
                           [self getCategoryValue],
                           pageNumber] ;
     
     [map fetchByTitle:_selectedCategory.title forURL:pagedURL and:^(BOOL result, ImagesCategory * _Nullable category) {
-        if(result) {
             dispatch_async(dispatch_get_main_queue(), ^(void){
+                if(result) {
                    [self handleRefreshParsing:category];
                    [self replaceImageAtIndex:row];
+                }else {
+                    self->pageNumber = self->pageNumber - 1;
+                    [self failedToFetchImageData:row];
+                }
             });
-        }else {
-            //TODO: Handle Error
-            self->pageNumber = self->pageNumber - 1;
-            [self failedToFetchImageData:row];
-        }
+        
     }];
 }
 

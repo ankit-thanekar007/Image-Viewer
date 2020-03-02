@@ -21,7 +21,7 @@
                         <subviews>
                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kdl-6y-gWz" customClass="LoadingImageView">
                                 <rect key="frame" x="16" y="16" width="232" height="404.5"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="248" placeholderIntrinsicHeight="50" distribution="fillEqually" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="if8-AW-UCI">
                                 <rect key="frame" x="8" y="428.5" width="248" height="39.5"/>
@@ -51,9 +51,21 @@
                                     <constraint firstItem="abO-i6-Cf8" firstAttribute="width" secondItem="hiW-FB-qLY" secondAttribute="width" id="m2L-cd-Chg"/>
                                 </constraints>
                             </stackView>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ehz-ei-4Dv">
+                                <rect key="frame" x="106.5" y="218.5" width="51" height="39"/>
+                                <color key="backgroundColor" white="0.90000000000000002" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="Retry">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="shouldRetry:" destination="gTV-IL-0wX" eventType="touchUpInside" id="BlU-NN-ZcR"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="Ehz-ei-4Dv" firstAttribute="centerX" secondItem="4zz-A5-mPg" secondAttribute="centerX" id="41c-Ox-rxK"/>
                             <constraint firstAttribute="trailing" secondItem="if8-AW-UCI" secondAttribute="trailing" constant="8" id="A5y-AW-ppf"/>
                             <constraint firstItem="kdl-6y-gWz" firstAttribute="height" secondItem="4zz-A5-mPg" secondAttribute="height" multiplier="0.85" id="EP4-7f-lPL"/>
                             <constraint firstItem="kdl-6y-gWz" firstAttribute="leading" secondItem="4zz-A5-mPg" secondAttribute="leading" constant="16" id="Egg-G8-yj5"/>
@@ -61,6 +73,7 @@
                             <constraint firstItem="kdl-6y-gWz" firstAttribute="top" secondItem="4zz-A5-mPg" secondAttribute="top" constant="16" id="apR-VE-2cm"/>
                             <constraint firstItem="if8-AW-UCI" firstAttribute="leading" secondItem="4zz-A5-mPg" secondAttribute="leading" constant="8" id="iqi-WS-GPI"/>
                             <constraint firstItem="if8-AW-UCI" firstAttribute="top" secondItem="kdl-6y-gWz" secondAttribute="bottom" constant="8" id="qrn-d3-wTU"/>
+                            <constraint firstItem="Ehz-ei-4Dv" firstAttribute="centerY" secondItem="4zz-A5-mPg" secondAttribute="centerY" id="shc-TD-jYt"/>
                             <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="if8-AW-UCI" secondAttribute="bottom" constant="8" id="uT8-H5-dun"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
@@ -84,6 +97,8 @@
                 <outlet property="downloadsView" destination="hiW-FB-qLY" id="edT-SM-Vbt"/>
                 <outlet property="favoritesView" destination="abO-i6-Cf8" id="wWo-v7-Ysl"/>
                 <outlet property="likesView" destination="OFA-bK-WEC" id="Bsa-uD-0jz"/>
+                <outlet property="metaStack" destination="if8-AW-UCI" id="Jba-kw-Z1f"/>
+                <outlet property="retryButton" destination="Ehz-ei-4Dv" id="uis-G2-rbj"/>
                 <outlet property="viewsView" destination="AmQ-nN-L3k" id="ecV-Tf-9Dc"/>
             </connections>
             <point key="canvasLocation" x="-445" y="7"/>

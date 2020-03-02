@@ -34,18 +34,19 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, assign) NSInteger userID;
 @property (nonatomic, copy)   NSString *user;
 @property (nonatomic, copy)   NSString *userImageURL;
+@property BOOL shouldRetry;
 
-+ (_Nullable instancetype)fromJSON:(NSString *)json
-                          encoding:(NSStringEncoding)encoding
-                             error:(NSError *_Nullable *)error;
-
-+ (_Nullable instancetype)fromData:(NSData *)data
-                             error:(NSError *_Nullable *)error;
-
-- (NSString *_Nullable)toJSON:(NSStringEncoding)encoding
-                        error:(NSError *_Nullable *)error;
-
-- (NSData *_Nullable)toData:(NSError *_Nullable *)error;
+//+ (_Nullable instancetype)fromJSON:(NSString *)json
+//                          encoding:(NSStringEncoding)encoding
+//                             error:(NSError *_Nullable *)error;
+//
+//+ (_Nullable instancetype)fromData:(NSData *)data
+//                             error:(NSError *_Nullable *)error;
+//
+//- (NSString *_Nullable)toJSON:(NSStringEncoding)encoding
+//                        error:(NSError *_Nullable *)error;
+//
+//- (NSData *_Nullable)toData:(NSError *_Nullable *)error;
 @end
 
 NS_ASSUME_NONNULL_END

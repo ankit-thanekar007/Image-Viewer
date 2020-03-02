@@ -18,26 +18,38 @@
             <rect key="frame" x="0.0" y="0.0" width="527" height="525"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dJL-Rx-1ap">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z3Y-UN-Tza">
                     <rect key="frame" x="0.0" y="0.0" width="527" height="525"/>
-                </imageView>
-                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="6J1-3C-jRU">
-                    <rect key="frame" x="253.5" y="252.5" width="20" height="20"/>
-                    <color key="color" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                </activityIndicatorView>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dJL-Rx-1ap">
+                            <rect key="frame" x="0.0" y="0.0" width="527" height="525"/>
+                        </imageView>
+                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="6J1-3C-jRU">
+                            <rect key="frame" x="253.5" y="252.5" width="20" height="20"/>
+                            <color key="color" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </activityIndicatorView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstItem="6J1-3C-jRU" firstAttribute="centerY" secondItem="Z3Y-UN-Tza" secondAttribute="centerY" id="1lX-lV-fHR"/>
+                        <constraint firstItem="6J1-3C-jRU" firstAttribute="centerX" secondItem="Z3Y-UN-Tza" secondAttribute="centerX" id="Gbi-82-hHz"/>
+                        <constraint firstAttribute="bottom" secondItem="dJL-Rx-1ap" secondAttribute="bottom" id="Y3O-kf-574"/>
+                        <constraint firstAttribute="trailing" secondItem="dJL-Rx-1ap" secondAttribute="trailing" id="fzX-Qo-fYZ"/>
+                        <constraint firstItem="dJL-Rx-1ap" firstAttribute="top" secondItem="Z3Y-UN-Tza" secondAttribute="top" id="kUQ-RL-2OD"/>
+                        <constraint firstItem="dJL-Rx-1ap" firstAttribute="leading" secondItem="Z3Y-UN-Tza" secondAttribute="leading" id="qFd-Ue-ob2"/>
+                    </constraints>
+                </view>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstItem="6J1-3C-jRU" firstAttribute="centerY" secondItem="4Sr-cG-JKL" secondAttribute="centerY" id="5sc-1T-x4n"/>
-                <constraint firstItem="dJL-Rx-1ap" firstAttribute="top" secondItem="4Sr-cG-JKL" secondAttribute="top" id="6cT-ES-R6v"/>
-                <constraint firstAttribute="trailing" secondItem="dJL-Rx-1ap" secondAttribute="trailing" id="7sM-rP-hXc"/>
-                <constraint firstItem="dJL-Rx-1ap" firstAttribute="leading" secondItem="4Sr-cG-JKL" secondAttribute="leading" id="Gnd-H2-dvg"/>
-                <constraint firstItem="6J1-3C-jRU" firstAttribute="centerX" secondItem="4Sr-cG-JKL" secondAttribute="centerX" id="LIX-EW-hkZ"/>
-                <constraint firstAttribute="bottom" secondItem="dJL-Rx-1ap" secondAttribute="bottom" id="qIG-ab-YxD"/>
+                <constraint firstItem="Z3Y-UN-Tza" firstAttribute="top" secondItem="4Sr-cG-JKL" secondAttribute="top" id="Mlg-f0-gjs"/>
+                <constraint firstItem="Z3Y-UN-Tza" firstAttribute="leading" secondItem="4Sr-cG-JKL" secondAttribute="leading" id="Xl2-hx-gyv"/>
+                <constraint firstAttribute="bottom" secondItem="Z3Y-UN-Tza" secondAttribute="bottom" id="rUg-Le-9j3"/>
+                <constraint firstAttribute="trailing" secondItem="Z3Y-UN-Tza" secondAttribute="trailing" id="veK-SQ-lWB"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="TVX-lq-83p"/>
-            <point key="canvasLocation" x="192.0289855072464" y="-390.73660714285711"/>
+            <point key="canvasLocation" x="43" y="-391"/>
         </view>
     </objects>
 </document>

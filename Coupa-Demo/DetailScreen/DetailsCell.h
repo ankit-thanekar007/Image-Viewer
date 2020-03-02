@@ -19,12 +19,15 @@ NS_ASSUME_NONNULL_BEGIN
 -(void)setCellData : (ImageDetails*)details atIndex : (int) row;
 
 @property int indexOfCell;
+
 @property(nonatomic) IBOutlet LoadingImageView *detailedImage;
 
 @property(nonatomic) IBOutlet MetaDataView *likesView;
 @property(nonatomic) IBOutlet MetaDataView *favoritesView;
 @property(nonatomic) IBOutlet MetaDataView *viewsView;
 @property(nonatomic) IBOutlet MetaDataView *downloadsView;
+@property(nonatomic) IBOutlet UIButton *retryButton;
+@property(nonatomic) IBOutlet UIStackView *metaStack;
 
 @end
 

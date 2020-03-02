@@ -39,7 +39,7 @@
     
     dispatch_group_enter(group);
 //
-    [map fetchNatureDataWithURL:@"&category=nature&per_page=5" and:^(BOOL result, ImagesCategory * _Nullable category) {
+    [map fetchNatureDataWithURL:@"&category=nature&per_page=20" and:^(BOOL result, ImagesCategory * _Nullable category) {
         if(result) {
             [self.categoryMaster addObject:category];
             counter++;
@@ -48,7 +48,7 @@
     }];
     
     dispatch_group_enter(group);
-    [map fetchScienceDataWithURL:@"&category=science&per_page=5" and:^(BOOL result, ImagesCategory * category) {
+    [map fetchScienceDataWithURL:@"&category=science&per_page=20" and:^(BOOL result, ImagesCategory * category) {
         if(result) {
             [self.categoryMaster addObject:category];
             counter++;
@@ -57,7 +57,7 @@
     }];
     
     dispatch_group_enter(group);
-    [map fetchEducationDataWithURL:@"&category=education&per_page=5" and:^(BOOL result, ImagesCategory * category) {
+    [map fetchEducationDataWithURL:@"&category=education&per_page=20" and:^(BOOL result, ImagesCategory * category) {
         if(result) {
             [self.categoryMaster addObject:category];
             counter++;
@@ -66,7 +66,7 @@
     }];
     
     dispatch_group_enter(group);
-    [map fetchFoodDataWithURL:@"&category=food&per_page=5" and:^(BOOL result, ImagesCategory * category) {
+    [map fetchFoodDataWithURL:@"&category=food&per_page=20" and:^(BOOL result, ImagesCategory * category) {
         if(result) {
             [self.categoryMaster addObject:category];
             counter++;

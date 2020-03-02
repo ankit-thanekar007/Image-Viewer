@@ -11,6 +11,7 @@
 @implementation DetailsCell
 {
     NSString *currentURL ;
+    ImageDetails *details;
 }
 
 - (void)awakeFromNib {
@@ -26,15 +27,34 @@
     [self.likesView setImage:nil];
 }
 
--(void)setCellData : (ImageDetails*)details atIndex : (int) row {
-    
+-(void)setCellData : (ImageDetails*)d atIndex : (int) row {
     [self setIndexOfCell:row];
-    
+    details = d;
+    if([details shouldRetry]) {
+        [self errorSet];
+    }else {
+        [self successSet];
+    }
+}
+
+
+-(void)successSet {
     [self setLikes: [@(details.likes) stringValue]];
     [self setFavorites: [@(details.favorites) stringValue]];
     [self setDownloads: [@(details.downloads) stringValue]];
     [self setViews: [@(details.views) stringValue]];
-    
+    [self fetchImage];
+}
+
+-(void)errorSet {
+    [self.detailedImage stopLoading];
+    [[self retryButton] setHidden:NO];
+    [_metaStack setHidden:YES];
+}
+
+-(void)fetchImage {
+    [[self retryButton] setHidden:YES];
+    [_metaStack setHidden:NO];
     [_detailedImage startLoading];
     currentURL = details.largeImageURL;
     [[AsyncImageManager sharedInstance] downloadImageWithURL:currentURL onCompletion:^(BOOL result, UIImage * _Nonnull image) {
@@ -42,14 +62,16 @@
             if(result) {
                 self.detailedImage.imageV.image = image;
             }else {
-                UIImage *placeholder = [UIImage imageNamed:@"download_failed"];
-                self.detailedImage.imageV.image = placeholder;
+                [self errorSet];
+//                UIImage *placeholder = [UIImage imageNamed:@"download_failed"];
+//                self.detailedImage.imageV.image = placeholder;
             }
             [self.detailedImage stopLoading];
             [self setNeedsDisplay];
         });
     }];
 }
+
 
 -(void)setLikes : (NSString*)data {
     [_likesView setImage:[UIImage imageNamed:@"likes"] andData:data];
@@ -67,7 +89,9 @@
     [_downloadsView setImage:[UIImage imageNamed:@"downloads"] andData:data];
 }
 
-
+- (IBAction)shouldRetry:(UIButton*)sender {
+    [self fetchImage];
+}
 
 
 @end

@@ -116,7 +116,7 @@
                                 <color key="color" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </activityIndicatorView>
                         </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="ugW-x1-gDl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="5VI-dE-cMP"/>
                             <constraint firstItem="vWg-Gq-mUg" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="LSe-Vo-yh7"/>
@@ -147,11 +147,12 @@
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fetching..." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gg9-fQ-xRJ">
                                     <rect key="frame" x="32" y="171.5" width="318" height="16"/>
                                     <fontDescription key="fontDescription" name="Georgia-Italic" family="Georgia" pointSize="14"/>
-                                    <nil key="textColor"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow_down" translatesAutoresizingMaskIntoConstraints="NO" id="KkU-Ve-Ec2">
                                     <rect key="frame" x="171" y="115.5" width="40" height="40"/>
+                                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
                                         <constraint firstAttribute="width" relation="lessThanOrEqual" constant="40" id="CMK-Jz-jEZ"/>
                                         <constraint firstAttribute="width" secondItem="KkU-Ve-Ec2" secondAttribute="height" multiplier="1:1" id="hO4-d6-K9u"/>
@@ -208,7 +209,7 @@
                                 </connections>
                             </collectionView>
                         </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="dsa-aD-nQI" firstAttribute="bottom" secondItem="lx0-RP-JXW" secondAttribute="bottom" id="9mB-ip-OOJ"/>
                             <constraint firstItem="dsa-aD-nQI" firstAttribute="trailing" secondItem="lx0-RP-JXW" secondAttribute="trailing" id="Juu-mn-yGs"/>

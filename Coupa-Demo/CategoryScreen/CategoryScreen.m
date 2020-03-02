@@ -31,6 +31,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    _master = [NSMutableArray array];
     [self setupRefreshControl];
     [self fetchData];
     [_tableView setEstimatedRowHeight:UITableViewAutomaticDimension];
@@ -46,7 +47,7 @@
 -(void)setupRefreshControl {
     UIRefreshControl *refreshControl = [[UIRefreshControl alloc]init];
     _tableView.refreshControl = refreshControl;
-//    [_tableView.refreshControl addTarget:self action:@selector(fetchData) forControlEvents:UIControlEventValueChanged];
+    [_tableView.refreshControl addTarget:self action:@selector(fetchData) forControlEvents:UIControlEventValueChanged];
     [[_tableView refreshControl] endRefreshing];
     [self setEdgesForExtendedLayout:UIRectEdgeTop];
     [self setExtendedLayoutIncludesOpaqueBars:YES];
@@ -68,6 +69,9 @@
 
 -(void)stopRelatedLoaders {
     [_loader stopAnimating];
+    if([[_tableView refreshControl] isRefreshing]) {
+        [[_tableView refreshControl] endRefreshing];
+    }
 }
 
 #pragma mark Category Delegate Methods
@@ -80,17 +84,16 @@
     [self stopRelatedLoaders];
     [_tableView setHidden:NO];
     
-    if(!shouldRefresh) {
+//    if(!shouldRefresh) {
         shouldRefresh = YES;
         [_tableView reloadData];
-    }
+//    }
 }
 
 - (void)failedToFetchData:(nonnull NSError *)error {
     _fetchingFailedViewLabel.text = @"Error in fetching, Seems servers are down,Please try after some time!";
     [_tableView setHidden:NO];
     [self stopRelatedLoaders];
-    NSLog(@"Values %@", error);
 }
 
 #pragma mark TableView Data Source
@@ -104,7 +107,12 @@
 }
 
 - (NSInteger)tableView:(nonnull UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    [tableView.backgroundView setHidden:[_master count]];
+    if([_master count] > 0) {
+        [tableView.backgroundView setHidden:YES];
+    }else {
+        [tableView.backgroundView setHidden:NO];
+    }
+    
     return [_master count];
 }
 
@@ -118,7 +126,7 @@
 #pragma mark ScrollView Delegate
 
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
-    [[_tableView refreshControl] beginRefreshing];
+//    [[_tableView refreshControl] beginRefreshing];
 }
 
 - (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate{

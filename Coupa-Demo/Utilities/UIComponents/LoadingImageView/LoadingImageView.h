@@ -15,6 +15,8 @@ IB_DESIGNABLE
 
 @property (nonatomic) IBOutlet UIImageView *imageV;
 @property (nonatomic) IBOutlet UIActivityIndicatorView *loader;
+@property (nonatomic) IBOutlet UIButton *retryButton;
+
 @property (nonatomic) IBInspectable UIViewContentMode mode;
 
 -(void)setImage:(nullable UIImage*)image;
