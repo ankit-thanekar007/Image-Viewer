@@ -1,37 +1,7 @@
-## Welcome to GitHub Pages
+## Image Viewer
 
-You can use the [editor on GitHub](https://github.com/ankit-thanekar007/Coupa-Demo/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+This is a demo application. This application uses Objective-C with no 3rd party frameworks. This app is Portrait mode only.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+In this project I've used Pixabay Open-Source Image API to view images. The categories for images are pre-decided. They're Education, Nature, Food and Science. On selection you'll be taken to the detail page to view the photos. The photos contain some metadata information like number of views, number of likes, number of downloads and number of people who marked it as their favorite. 
 
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/ankit-thanekar007/Coupa-Demo/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+You can swipe the view to cycle through images, The images are being cached using NSCache. NSCache manages memory pressure and releases memory as it wants. You can also swipe down on any image to load an image which is not currently present in your image stack. 
