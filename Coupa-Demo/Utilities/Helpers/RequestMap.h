@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "ImagesCategory.h"
 #import "ImageDetails.h"
-
+#import "AppConstants.pch"
 
 NS_ASSUME_NONNULL_BEGIN
 
