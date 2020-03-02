@@ -19,7 +19,6 @@
 
 -(void)prepareForReuse {
     [super prepareForReuse];
-    [[AsyncImageManager sharedInstance] cancelTaskFor:currentURL];
     [self.detailedImage setImage:nil];
     [self.viewsView setImage:nil];
     [self.downloadsView setImage:nil];
@@ -38,14 +37,17 @@
     
     [_detailedImage startLoading];
     currentURL = details.largeImageURL;
-    [[AsyncImageManager sharedInstance] downloadImageWithURL:details.largeImageURL onCompletion:^(BOOL result, UIImage * _Nonnull image) {
-        if(result) {
-            [self->_detailedImage setImage:image];
-        }else {
-            UIImage *placeholder = [UIImage imageNamed:@"download_failed"];
-            [self->_detailedImage setImage:placeholder];
-        }
-        [self->_detailedImage stopLoading];
+    [[AsyncImageManager sharedInstance] downloadImageWithURL:currentURL onCompletion:^(BOOL result, UIImage * _Nonnull image) {
+        dispatch_async(dispatch_get_main_queue(), ^(void){
+            if(result) {
+                self.detailedImage.imageV.image = image;
+            }else {
+                UIImage *placeholder = [UIImage imageNamed:@"download_failed"];
+                self.detailedImage.imageV.image = placeholder;
+            }
+            [self.detailedImage stopLoading];
+            [self setNeedsDisplay];
+        });
     }];
 }
 

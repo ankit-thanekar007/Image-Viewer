@@ -18,21 +18,32 @@
 
 @implementation DetailScreen
 
+{
+    BOOL didRefresh;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    [self setTitle:_selectedCategory.title];
     [[DetailDataController sharedInstance] setMasterCategory:_selectedCategory];
     [[DetailDataController sharedInstance] setDelegate:self];
     
-    _imageDetailsArray = [[[DetailDataController sharedInstance] getToBeUsed] mutableCopy];
+    _imageDetailsArray = [[DetailDataController sharedInstance] getToBeUsed];
     
     [self setupCollectionViewCell];
     [self setupRefreshControl];
 }
 
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    [_imageDetailsArray removeAllObjects];
+    _imageDetailsArray = nil;
+    _selectedCategory = nil;
+    [[AsyncImageManager sharedInstance] clearCache];
+}
+
 -(void)setupCollectionViewCell {
     UINib *nib = [UINib nibWithNibName:@"DetailsCell" bundle:[NSBundle mainBundle]];
-    
     [_collectionView registerNib:nib forCellWithReuseIdentifier:@"DetailsCell"];
 }
 
@@ -44,12 +55,11 @@
 }
 
 -(void)handleSingleImageRefresh {
-    DetailsCell *cell = [[_collectionView visibleCells] firstObject];
-    NSLog(@"Index Of Cell %d", [cell indexOfCell]);
-    
-    [[DetailDataController sharedInstance] replaceImageAtIndex:[cell indexOfCell]];
-    
-    [[_collectionView refreshControl] endRefreshing];
+    CGRect visibleRect = (CGRect){.origin = self.collectionView.contentOffset, .size = self.collectionView.bounds.size};
+    CGPoint visiblePoint = CGPointMake(CGRectGetMidX(visibleRect), CGRectGetMidY(visibleRect));
+    NSIndexPath *visibleIndexPath = [self.collectionView indexPathForItemAtPoint:visiblePoint];
+//    DetailsCell *cell = [[_collectionView visibleCells] firstObject];
+    [[DetailDataController sharedInstance] replaceImageAtIndex:(int)visibleIndexPath.row];
 }
 
 #pragma mark UICollectionView DataSource
@@ -74,10 +84,14 @@
 #pragma mark Refresh Cell Delegate
 
 -(void)refreshCellAtIndex:(int)index {
-    
-    _imageDetailsArray = [[[DetailDataController sharedInstance] getToBeUsed]mutableCopy];
+    _imageDetailsArray = [[DetailDataController sharedInstance] getToBeUsed];
     [[self collectionView] reloadItemsAtIndexPaths:@[[NSIndexPath indexPathForItem:index
                                                                          inSection:0]]];
+    [[_collectionView refreshControl] endRefreshing];
+}
+
+-(void)failedToFetch:(int)index {
+    
 }
 
 @end

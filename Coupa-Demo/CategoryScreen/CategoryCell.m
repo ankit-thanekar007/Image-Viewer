@@ -39,50 +39,55 @@
     
     [_image_1 startLoading];
     _image1URL = category.imageMaster[0].previewURL;
+    
+    if (category == nil) {
+        return;
+    }
+    
     [[AsyncImageManager sharedInstance] downloadImageWithURL:_image1URL onCompletion:^(BOOL result, UIImage * _Nonnull image) {
         if(result) {
-            [self->_image_1 setImage:image];
+            [self.image_1 setImage:image];
         }else {
             UIImage *placeholder = [UIImage imageNamed:@"download_failed"];
-            [self->_image_1 setImage:placeholder];
+            [self.image_1 setImage:placeholder];
         }
-        [self->_image_1 stopLoading];
+        [self.image_1 stopLoading];
     }];
     
     [_image_2 startLoading];
     _image2URL = category.imageMaster[1].previewURL;
     [[AsyncImageManager sharedInstance] downloadImageWithURL:_image2URL onCompletion:^(BOOL result, UIImage * _Nonnull image) {
         if(result) {
-            [self->_image_2 setImage:image];
+            [self.image_2 setImage:image];
         }else {
             UIImage *placeholder = [UIImage imageNamed:@"download_failed"];
-            [self->_image_2 setImage:placeholder];
+            [self.image_2 setImage:placeholder];
         }
-        [self->_image_2 stopLoading];
+        [self.image_2 stopLoading];
     }];
     
     [_image_3 startLoading];
     _image3URL = category.imageMaster[2].previewURL;
     [[AsyncImageManager sharedInstance] downloadImageWithURL:_image3URL onCompletion:^(BOOL result, UIImage * _Nonnull image) {
         if(result) {
-            [self->_image_3 setImage:image];
+            [self.image_3 setImage:image];
         }else {
             UIImage *placeholder = [UIImage imageNamed:@"download_failed"];
-            [self->_image_3 setImage:placeholder];
+            [self.image_3 setImage:placeholder];
         }
-        [self->_image_3 stopLoading];
+        [self.image_3 stopLoading];
     }];
     
     [_image_4 startLoading];
     _image4URL = category.imageMaster[3].previewURL;
     [[AsyncImageManager sharedInstance] downloadImageWithURL:_image4URL onCompletion:^(BOOL result, UIImage * _Nonnull image) {
         if(result) {
-            [self->_image_4 setImage:image];
+            [self.image_4 setImage:image];
         }else {
             UIImage *placeholder = [UIImage imageNamed:@"download_failed"];
-            [self->_image_4 setImage:placeholder];
+            [self.image_4 setImage:placeholder];
         }
-        [self->_image_4 stopLoading];
+        [self.image_4 stopLoading];
     }];
 }
 

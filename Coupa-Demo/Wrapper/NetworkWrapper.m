@@ -15,6 +15,10 @@
                                                                  NSError *error,
                                                                  NSURLResponse *response))callback {
     
+    NSLog(@"############ URL START ################");
+    NSLog(@"URL: %@", urlString);
+    NSLog(@"############ URL END ################");
+    
     NSURL *url = [NSURL URLWithString:urlString];
     NSURLSessionConfiguration *config = [NSURLSessionConfiguration defaultSessionConfiguration];
     NSURLSession *session = [NSURLSession sessionWithConfiguration:config];

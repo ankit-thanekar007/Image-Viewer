@@ -20,6 +20,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 -(void)cancelTaskFor:(NSString*) uuid;
 -(void) cancelAll ;
+-(void) clearCache; 
 @end
 
 NS_ASSUME_NONNULL_END

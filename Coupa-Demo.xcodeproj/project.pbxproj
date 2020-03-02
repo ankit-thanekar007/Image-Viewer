@@ -83,7 +83,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		BCC54DAF240A164000D3C38E /* Coupa-Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Coupa-Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BCC54DAF240A164000D3C38E /* Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCC54DB2240A164000D3C38E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		BCC54DB3240A164000D3C38E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		BCC54DB5240A164000D3C38E /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
@@ -169,7 +169,7 @@
 		BCC54DB0240A164000D3C38E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				BCC54DAF240A164000D3C38E /* Coupa-Demo.app */,
+				BCC54DAF240A164000D3C38E /* Demo.app */,
 				BCC54DCA240A164500D3C38E /* Coupa-DemoTests.xctest */,
 				BCC54DD5240A164500D3C38E /* Coupa-DemoUITests.xctest */,
 			);
@@ -353,7 +353,7 @@
 			);
 			name = "Coupa-Demo";
 			productName = "Coupa-Demo";
-			productReference = BCC54DAF240A164000D3C38E /* Coupa-Demo.app */;
+			productReference = BCC54DAF240A164000D3C38E /* Demo.app */;
 			productType = "com.apple.product-type.application";
 		};
 		BCC54DC9240A164500D3C38E /* Coupa-DemoTests */ = {
@@ -695,7 +695,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ankit-t.Coupa-Demo";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Demo;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -714,7 +714,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ankit-t.Coupa-Demo";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Demo;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

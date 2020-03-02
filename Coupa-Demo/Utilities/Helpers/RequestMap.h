@@ -10,6 +10,7 @@
 #import "ImagesCategory.h"
 #import "ImageDetails.h"
 
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface RequestMap : NSObject
@@ -21,6 +22,7 @@ typedef void (^RequestMapCompletionHandler)(BOOL result, ImagesCategory * _Nulla
 -(void)fetchEducationDataWithURL :(NSString*)url and:  (RequestMapCompletionHandler)completion;
 -(void)fetchFoodDataWithURL :(NSString*)url and:  (RequestMapCompletionHandler)completion;
 
+-(void)fetchByTitle:(NSString*)title forURL : (NSString*)url and:(RequestMapCompletionHandler)completion;
 @end
 
 NS_ASSUME_NONNULL_END

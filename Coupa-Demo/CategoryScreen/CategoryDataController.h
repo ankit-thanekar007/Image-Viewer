@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "ImageDetails.h"
 #import "ImagesCategory.h"
+#import "RequestMap.h"
 
 NS_ASSUME_NONNULL_BEGIN
 

@@ -104,7 +104,7 @@ NSString *_Nullable ImageDetailsToJSON(ImageDetails *welcome, NSStringEncoding e
 }
 
 - (NSDictionary *)JSONDictionary{
-    id dict = [[self dictionaryWithValuesForKeys:ImageDetails.properties.allValues] mutableCopy];
+    id dict = [self dictionaryWithValuesForKeys:ImageDetails.properties.allValues];
     
     // Rewrite property names that differ in JSON
     for (id jsonName in ImageDetails.properties) {

@@ -22,6 +22,7 @@
 @implementation CategoryScreen
 {
     ImagesCategory *selectedCategory;
+    BOOL shouldRefresh;
 }
 
 -(CategoryDataController*)dataController {
@@ -32,6 +33,7 @@
     [super viewDidLoad];
     [self setupRefreshControl];
     [self fetchData];
+    [_tableView setEstimatedRowHeight:UITableViewAutomaticDimension];
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
@@ -44,8 +46,10 @@
 -(void)setupRefreshControl {
     UIRefreshControl *refreshControl = [[UIRefreshControl alloc]init];
     _tableView.refreshControl = refreshControl;
-    [_tableView.refreshControl addTarget:self action:@selector(fetchData) forControlEvents:UIControlEventValueChanged];
+//    [_tableView.refreshControl addTarget:self action:@selector(fetchData) forControlEvents:UIControlEventValueChanged];
     [[_tableView refreshControl] endRefreshing];
+    [self setEdgesForExtendedLayout:UIRectEdgeTop];
+    [self setExtendedLayoutIncludesOpaqueBars:YES];
 }
 
 -(void)fetchData {
@@ -63,7 +67,6 @@
 }
 
 -(void)stopRelatedLoaders {
-    [[_tableView refreshControl] endRefreshing];
     [_loader stopAnimating];
 }
 
@@ -76,7 +79,11 @@
     }
     [self stopRelatedLoaders];
     [_tableView setHidden:NO];
-    [_tableView reloadData];
+    
+    if(!shouldRefresh) {
+        shouldRefresh = YES;
+        [_tableView reloadData];
+    }
 }
 
 - (void)failedToFetchData:(nonnull NSError *)error {
@@ -106,6 +113,19 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     selectedCategory = [_master objectAtIndex:indexPath.row];
     [self performSegueWithIdentifier:@"ViewDetailsSegue" sender:self];
+}
+
+#pragma mark ScrollView Delegate
+
+- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
+    [[_tableView refreshControl] beginRefreshing];
+}
+
+- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate{
+    if([[_tableView refreshControl] isRefreshing]) {
+        [[_tableView refreshControl] endRefreshing];
+    }
+    [_tableView reloadData];
 }
 
 @end

@@ -23,9 +23,10 @@
                 </imageView>
                 <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="6J1-3C-jRU">
                     <rect key="frame" x="253.5" y="252.5" width="20" height="20"/>
+                    <color key="color" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </activityIndicatorView>
             </subviews>
-            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="6J1-3C-jRU" firstAttribute="centerY" secondItem="4Sr-cG-JKL" secondAttribute="centerY" id="5sc-1T-x4n"/>
                 <constraint firstItem="dJL-Rx-1ap" firstAttribute="top" secondItem="4Sr-cG-JKL" secondAttribute="top" id="6cT-ES-R6v"/>

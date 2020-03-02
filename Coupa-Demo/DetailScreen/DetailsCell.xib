@@ -20,52 +20,48 @@
                         <rect key="frame" x="8" y="8" width="264" height="476"/>
                         <subviews>
                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kdl-6y-gWz" customClass="LoadingImageView">
-                                <rect key="frame" x="16" y="16" width="232" height="309.5"/>
+                                <rect key="frame" x="16" y="16" width="232" height="404.5"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hiW-FB-qLY" customClass="MetaDataView">
-                                <rect key="frame" x="16" y="333.5" width="112" height="50"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="248" placeholderIntrinsicHeight="50" distribution="fillEqually" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="if8-AW-UCI">
+                                <rect key="frame" x="8" y="428.5" width="248" height="39.5"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" placeholderIntrinsicWidth="112" placeholderIntrinsicHeight="50" translatesAutoresizingMaskIntoConstraints="NO" id="hiW-FB-qLY" customClass="MetaDataView">
+                                        <rect key="frame" x="0.0" y="0.0" width="62" height="39.5"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OFA-bK-WEC" customClass="MetaDataView">
+                                        <rect key="frame" x="62" y="0.0" width="62" height="39.5"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AmQ-nN-L3k" customClass="MetaDataView">
+                                        <rect key="frame" x="124" y="0.0" width="62" height="39.5"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="abO-i6-Cf8" customClass="MetaDataView">
+                                        <rect key="frame" x="186" y="0.0" width="62" height="39.5"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="vFg-Xf-THi"/>
+                                    <constraint firstItem="abO-i6-Cf8" firstAttribute="height" secondItem="hiW-FB-qLY" secondAttribute="height" id="IcT-b5-tsa"/>
+                                    <constraint firstItem="OFA-bK-WEC" firstAttribute="height" secondItem="hiW-FB-qLY" secondAttribute="height" id="MHX-0Z-DAT"/>
+                                    <constraint firstItem="AmQ-nN-L3k" firstAttribute="width" secondItem="OFA-bK-WEC" secondAttribute="width" id="h1R-2k-JbV"/>
+                                    <constraint firstItem="AmQ-nN-L3k" firstAttribute="height" secondItem="hiW-FB-qLY" secondAttribute="height" id="jbx-JK-BCH"/>
+                                    <constraint firstItem="abO-i6-Cf8" firstAttribute="width" secondItem="hiW-FB-qLY" secondAttribute="width" id="m2L-cd-Chg"/>
                                 </constraints>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AmQ-nN-L3k" customClass="MetaDataView">
-                                <rect key="frame" x="136" y="391.5" width="112" height="50"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="abO-i6-Cf8" customClass="MetaDataView">
-                                <rect key="frame" x="136" y="333.5" width="112" height="50"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OFA-bK-WEC" customClass="MetaDataView">
-                                <rect key="frame" x="16" y="391.5" width="112" height="50"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                            </view>
+                            </stackView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="abO-i6-Cf8" firstAttribute="leading" secondItem="hiW-FB-qLY" secondAttribute="trailing" constant="8" symbolic="YES" id="19o-pl-qxc"/>
-                            <constraint firstItem="AmQ-nN-L3k" firstAttribute="leading" secondItem="OFA-bK-WEC" secondAttribute="trailing" constant="8" symbolic="YES" id="2KL-nN-aXT"/>
-                            <constraint firstItem="OFA-bK-WEC" firstAttribute="height" secondItem="hiW-FB-qLY" secondAttribute="height" id="BSP-Pk-O9B"/>
-                            <constraint firstItem="AmQ-nN-L3k" firstAttribute="top" secondItem="abO-i6-Cf8" secondAttribute="bottom" constant="8" id="DQr-bJ-bfN"/>
-                            <constraint firstItem="abO-i6-Cf8" firstAttribute="top" secondItem="kdl-6y-gWz" secondAttribute="bottom" constant="8" id="E5W-hl-5sl"/>
-                            <constraint firstItem="kdl-6y-gWz" firstAttribute="height" secondItem="4zz-A5-mPg" secondAttribute="height" multiplier="0.65" id="EP4-7f-lPL"/>
+                            <constraint firstAttribute="trailing" secondItem="if8-AW-UCI" secondAttribute="trailing" constant="8" id="A5y-AW-ppf"/>
+                            <constraint firstItem="kdl-6y-gWz" firstAttribute="height" secondItem="4zz-A5-mPg" secondAttribute="height" multiplier="0.85" id="EP4-7f-lPL"/>
                             <constraint firstItem="kdl-6y-gWz" firstAttribute="leading" secondItem="4zz-A5-mPg" secondAttribute="leading" constant="16" id="Egg-G8-yj5"/>
-                            <constraint firstItem="AmQ-nN-L3k" firstAttribute="trailing" secondItem="abO-i6-Cf8" secondAttribute="trailing" id="HBN-th-pzQ"/>
-                            <constraint firstItem="AmQ-nN-L3k" firstAttribute="width" secondItem="OFA-bK-WEC" secondAttribute="width" id="IMd-3m-lGJ"/>
-                            <constraint firstItem="OFA-bK-WEC" firstAttribute="leading" secondItem="hiW-FB-qLY" secondAttribute="leading" id="LQ2-0F-CjJ"/>
-                            <constraint firstItem="abO-i6-Cf8" firstAttribute="trailing" secondItem="kdl-6y-gWz" secondAttribute="trailing" id="LRF-fO-XAJ"/>
                             <constraint firstAttribute="trailing" secondItem="kdl-6y-gWz" secondAttribute="trailing" constant="16" id="O8y-iV-FkH"/>
-                            <constraint firstItem="abO-i6-Cf8" firstAttribute="height" secondItem="hiW-FB-qLY" secondAttribute="height" id="YT3-xV-mv2"/>
-                            <constraint firstItem="hiW-FB-qLY" firstAttribute="leading" secondItem="kdl-6y-gWz" secondAttribute="leading" id="aoK-wh-YIT"/>
                             <constraint firstItem="kdl-6y-gWz" firstAttribute="top" secondItem="4zz-A5-mPg" secondAttribute="top" constant="16" id="apR-VE-2cm"/>
-                            <constraint firstItem="OFA-bK-WEC" firstAttribute="top" secondItem="hiW-FB-qLY" secondAttribute="bottom" constant="8" id="bQO-bH-Vgv"/>
-                            <constraint firstItem="AmQ-nN-L3k" firstAttribute="height" secondItem="hiW-FB-qLY" secondAttribute="height" id="ka2-29-hfO"/>
-                            <constraint firstItem="hiW-FB-qLY" firstAttribute="top" secondItem="kdl-6y-gWz" secondAttribute="bottom" constant="8" id="lFI-Dv-ieS"/>
-                            <constraint firstItem="abO-i6-Cf8" firstAttribute="width" secondItem="hiW-FB-qLY" secondAttribute="width" id="mbI-cQ-5Vr"/>
-                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="AmQ-nN-L3k" secondAttribute="bottom" constant="16" id="nix-ls-zSk"/>
-                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="OFA-bK-WEC" secondAttribute="bottom" constant="16" id="rT2-mJ-ro2"/>
+                            <constraint firstItem="if8-AW-UCI" firstAttribute="leading" secondItem="4zz-A5-mPg" secondAttribute="leading" constant="8" id="iqi-WS-GPI"/>
+                            <constraint firstItem="if8-AW-UCI" firstAttribute="top" secondItem="kdl-6y-gWz" secondAttribute="bottom" constant="8" id="qrn-d3-wTU"/>
+                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="if8-AW-UCI" secondAttribute="bottom" constant="8" id="uT8-H5-dun"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -90,7 +86,7 @@
                 <outlet property="likesView" destination="OFA-bK-WEC" id="Bsa-uD-0jz"/>
                 <outlet property="viewsView" destination="AmQ-nN-L3k" id="ecV-Tf-9Dc"/>
             </connections>
-            <point key="canvasLocation" x="-89.855072463768124" y="7.3660714285714279"/>
+            <point key="canvasLocation" x="-445" y="7"/>
         </collectionViewCell>
     </objects>
 </document>

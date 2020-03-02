@@ -32,12 +32,27 @@
     return sharedInstance;
 }
 
+-(NSString*)getCategoryValue {
+    NSString *title = _selectedCategory.title;
+    if ([title isEqualToString: @"Education"]){
+        return @"education";
+    }else if ([title isEqualToString: @"Food"]){
+        return @"food";
+    }else if ([title isEqualToString: @"Nature"]){
+        return @"nature";
+    }else if ([title isEqualToString: @"Science"]){
+        return @"science";
+    }
+    return @"q";
+}
+
+
 -(void)setMasterCategory : (ImagesCategory*)category {
     _selectedCategory = category;
     [self splitMaster];
 }
 
--(NSArray<ImageDetails*>*)getToBeUsed {
+-(NSMutableArray<ImageDetails*>*)getToBeUsed {
     if(_toBeUsed) {
         return _toBeUsed;
     }
@@ -68,12 +83,18 @@
     }
 }
 
+-(void)failedToFetchImageData:(int) row {
+    [_delegate failedToFetch:row];
+}
+
 -(void)fetchDataFromRequestForReplacement:(int) row {
     RequestMap *map = [[RequestMap alloc] init];
     pageNumber = pageNumber + 1;
-    NSString *pagedURL = [NSString stringWithFormat:@"&category=nature&per_page=20&page=%d", pageNumber] ;
+    NSString *pagedURL = [NSString stringWithFormat:@"&category=%@&per_page=5&page=%d",
+                          [self getCategoryValue],
+                          pageNumber] ;
     
-    [map fetchNatureDataWithURL:pagedURL and:^(BOOL result, ImagesCategory * _Nullable category) {
+    [map fetchByTitle:_selectedCategory.title forURL:pagedURL and:^(BOOL result, ImagesCategory * _Nullable category) {
         if(result) {
             dispatch_async(dispatch_get_main_queue(), ^(void){
                    [self handleRefreshParsing:category];
@@ -81,6 +102,8 @@
             });
         }else {
             //TODO: Handle Error
+            self->pageNumber = self->pageNumber - 1;
+            [self failedToFetchImageData:row];
         }
     }];
 }

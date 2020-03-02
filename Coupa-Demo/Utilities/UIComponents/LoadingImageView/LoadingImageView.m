@@ -29,9 +29,6 @@
 
 -(void)drawRect:(CGRect)rect {
     [super drawRect:rect];
-    if(_mode) {
-        [_imageV setContentMode:_mode];
-    }
 }
 
 -(void)prepareContainer{
@@ -51,20 +48,20 @@
 
 -(void)setImage:(UIImage*)image {
     dispatch_async(dispatch_get_main_queue(), ^(void){
-           [self->_imageV setImage:image];
+           [self.imageV setImage:image];
     });
 }
 
 -(void)startLoading {
     dispatch_async(dispatch_get_main_queue(), ^(void){
-           [self->_loader startAnimating];
+           [self.loader startAnimating];
     });
     
 }
 
 -(void)stopLoading {
     dispatch_async(dispatch_get_main_queue(), ^(void){
-           [self->_loader stopAnimating];
+           [self.loader stopAnimating];
     });
 }
 

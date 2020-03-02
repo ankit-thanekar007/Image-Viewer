@@ -78,4 +78,10 @@
     [_urlDict removeAllObjects];
 }
 
+-(void)clearCache {
+    [self cancelAll];
+    [self.imageCache removeAllObjects];
+    [self.urlDict removeAllObjects];
+}
+
 @end
